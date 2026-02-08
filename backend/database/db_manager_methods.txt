@@ -1,0 +1,26 @@
+
+    def delete_expense(self, expense_id: int) -> bool:
+        """Soft delete an expense"""
+        conn = self._get_connection()
+        cursor = conn.cursor()
+        cursor.execute('''
+            UPDATE expenses SET deleted_at = ? WHERE id = ?
+        ''', (datetime.now().isoformat(), expense_id))
+        
+        row_count = cursor.rowcount
+        conn.commit()
+        conn.close()
+        return row_count > 0
+
+    def update_expense_category(self, expense_id: int, category: str) -> bool:
+        """Update category for an expense (by local ID)"""
+        conn = self._get_connection()
+        cursor = conn.cursor()
+        cursor.execute('''
+            UPDATE expenses SET ai_category = ? WHERE id = ?
+        ''', (category, expense_id))
+        
+        row_count = cursor.rowcount
+        conn.commit()
+        conn.close()
+        return row_count > 0
