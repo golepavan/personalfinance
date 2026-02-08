@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
+
+@layer base {
+  :root {
+    --background: 230 25% 97%;
+    --foreground: 230 25% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 230 25% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 25% 12%;
+
+    --primary: 245 58% 51%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 230 25% 95%;
+    --secondary-foreground: 230 25% 12%;
+
+    --muted: 230 15% 93%;
+    --muted-foreground: 230 10% 50%;
+
+    --accent: 40 95% 55%;
+    --accent-foreground: 40 95% 15%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 60% 45%;
+    --success-foreground: 152 60% 15%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 38 92% 15%;
+
+    --border: 230 15% 90%;
+    --input: 230 15% 90%;
+    --ring: 245 58% 51%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 230 15% 40%;
+    --sidebar-primary: 245 58% 51%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 245 58% 96%;
+    --sidebar-accent-foreground: 245 58% 51%;
+    --sidebar-border: 230 15% 92%;
+    --sidebar-ring: 245 58% 51%;
+
+    --chart-blue: 245 58% 51%;
+    --chart-green: 152 60% 45%;
+    --chart-orange: 25 95% 53%;
+    --chart-red: 0 72% 51%;
+    --chart-yellow: 40 95% 55%;
+    --chart-teal: 174 60% 45%;
+  }
+
+  .dark {
+    --background: 230 25% 8%;
+    --foreground: 230 15% 90%;
+    --card: 230 25% 12%;
+    --card-foreground: 230 15% 90%;
+    --popover: 230 25% 12%;
+    --popover-foreground: 230 15% 90%;
+    --primary: 245 58% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 230 25% 18%;
+    --secondary-foreground: 230 15% 90%;
+    --muted: 230 15% 20%;
+    --muted-foreground: 230 10% 55%;
+    --accent: 40 95% 55%;
+    --accent-foreground: 40 95% 95%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 230 15% 20%;
+    --input: 230 15% 20%;
+    --ring: 245 58% 60%;
+    --sidebar-background: 230 25% 10%;
+    --sidebar-foreground: 230 15% 65%;
+    --sidebar-primary: 245 58% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 245 58% 15%;
+    --sidebar-accent-foreground: 245 58% 70%;
+    --sidebar-border: 230 15% 18%;
+    --sidebar-ring: 245 58% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'DM Sans', sans-serif;
+  }
+}
